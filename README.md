@@ -1,97 +1,248 @@
-# Cinematic Portfolio
+<div align="center">
 
-A high-performance personal portfolio built with Next.js 16, GSAP, Three.js, and CSS Modules. Designed to be forked and used as your own.
+```
+██████╗ ███████╗███████╗██████╗  █████╗ ██╗  ██╗
+██╔══██╗██╔════╝██╔════╝██╔══██╗██╔══██╗██║ ██╔╝
+██║  ██║█████╗  █████╗  ██████╔╝███████║█████╔╝ 
+██║  ██║██╔══╝  ██╔══╝  ██╔═══╝ ██╔══██║██╔═██╗ 
+██████╔╝███████╗███████╗██║     ██║  ██║██║  ██╗
+╚═════╝ ╚══════╝╚══════╝╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝
 
-**Live:** [vaibhav-create.vercel.app](https://vaibhav-create.vercel.app) &nbsp;|&nbsp; **GitHub:** [VaibhavKhushalani/cinematic-portfolio](https://github.com/VaibhavKhushalani/cinematic-portfolio)
+██╗   ██╗███████╗██████╗ ███╗   ███╗ █████╗ 
+██║   ██║██╔════╝██╔══██╗████╗ ████║██╔══██╗
+██║   ██║█████╗  ██████╔╝██╔████╔██║███████║
+╚██╗ ██╔╝██╔══╝  ██╔══██╗██║╚██╔╝██║██╔══██║
+ ╚████╔╝ ███████╗██║  ██║██║ ╚═╝ ██║██║  ██║
+  ╚═══╝  ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝
+```
 
-If this helped you, consider leaving a ⭐ on GitHub.
+<h3>✦ &nbsp; D E E P A K &nbsp; V E R M A &nbsp; ✦</h3>
+<h4><em>Full Stack Developer &nbsp;·&nbsp; React Native &nbsp;·&nbsp; AI Builder</em></h4>
 
-## Stack
+<br/>
 
-| Layer      | Technology                                       |
-| ---------- | ------------------------------------------------ |
-| Framework  | Next.js 16.2 (App Router, React Compiler)        |
-| Animations | GSAP 3 + Three.js                                |
-| Styling    | CSS Modules + Tailwind v4 (tokens only)          |
-| Icons      | react-icons                                      |
-| Fonts      | Geist, Baloo 2, Dancing Script (via next/font)   |
+[![Next.js](https://img.shields.io/badge/Next.js_16-0a0f1e?style=for-the-badge&logo=next.js&logoColor=4f8ef7)](https://nextjs.org/)
+[![GSAP](https://img.shields.io/badge/GSAP_3-0a0f1e?style=for-the-badge&logo=greensock&logoColor=4f8ef7)](https://gsap.com/)
+[![Three.js](https://img.shields.io/badge/Three.js-0a0f1e?style=for-the-badge&logo=three.js&logoColor=4f8ef7)](https://threejs.org/)
+[![Tailwind](https://img.shields.io/badge/Tailwind_v4-0a0f1e?style=for-the-badge&logo=tailwind-css&logoColor=4f8ef7)](https://tailwindcss.com/)
+[![Vercel](https://img.shields.io/badge/Deployed_on_Vercel-0a0f1e?style=for-the-badge&logo=vercel&logoColor=4f8ef7)](https://cinematic-portfolio-mu.vercel.app/)
 
-## Getting Started
+<br/>
+
+<a href="https://cinematic-portfolio-mu.vercel.app/">
+  <img src="https://img.shields.io/badge/🚀_LIVE_DEMO-cinematic--portfolio--mu.vercel.app-4f8ef7?style=for-the-badge&labelColor=0a0f1e" />
+</a>
+
+<br/><br/>
+
+<a href="https://github.com/de-coder-bit">
+  <img src="https://img.shields.io/badge/GitHub-de--coder--bit-4f8ef7?style=for-the-badge&logo=github&logoColor=white&labelColor=0a0f1e" />
+</a>
+&nbsp;
+<a href="https://www.linkedin.com/in/deepak-verma-b552b5285/">
+  <img src="https://img.shields.io/badge/LinkedIn-Deepak_Verma-4f8ef7?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0a0f1e" />
+</a>
+
+<br/><br/>
+
+---
+
+</div>
+
+<br/>
+
+## 🎬 &nbsp;What Is This?
+
+> *Most portfolios are just resumes on a webpage. This one is a cinematic experience.*
+
+**Deepak Verma's personal developer portfolio** — built from the ground up with sticky scroll sections, GSAP-driven animations, a Three.js particle field, and a full-screen video intro. Every scroll feels intentional. Every section lands like a film frame.
+
+<br/>
+
+```
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║   🎥  Full-screen ambient video intro with skip control      ║
+║   🎯  Sticky scroll — sections stack like cinematic frames   ║
+║   ✨  GSAP-animated name, stats & bio typewriter effect      ║
+║   🎠  Horizontal project carousel with GSAP momentum         ║
+║   🌌  Three.js particle background in the hero section       ║
+║   🎨  Navy blue dark theme — professional & premium          ║
+║   📱  Fully responsive — mobile, tablet & desktop            ║
+║   ⚡  Optimised — lazy video, next/image, CSS Modules        ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+```
+
+<br/>
+
+---
+
+## 🛠️ &nbsp;Tech Stack
+
+| Layer | Technology | Purpose |
+|-------|-----------|---------|
+| 🏗️ **Framework** | Next.js 16.2 — App Router + React Compiler | Fast, SEO-ready foundation |
+| 🎬 **Animations** | GSAP 3 + ScrollTrigger | Cinematic scroll & timeline control |
+| 🌌 **3D / FX** | Three.js | Hero particle field |
+| 🎨 **Styling** | CSS Modules + Tailwind v4 tokens | Scoped, zero-conflict styles |
+| 🔡 **Fonts** | Geist · Baloo 2 · Dancing Script | Personality meets readability |
+| 🎭 **Icons** | react-icons | Clean, consistent icon set |
+| 🚀 **Deploy** | Vercel — edge CDN | Zero-config, auto-deploys |
+
+<br/>
+
+---
+
+## ⚡ &nbsp;Quick Start
 
 ```bash
-git clone https://github.com/VaibhavKhushalani/cinematic-portfolio.git
+# Clone the repo
+git clone https://github.com/de-coder-bit/cinematic-portfolio.git
 cd cinematic-portfolio
+
+# Install dependencies
 npm install
+
+# Start dev server
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+> 🌐 Open **[http://localhost:3000](http://localhost:3000)** and watch it come alive.
 
-To build for production:
+<br/>
 
 ```bash
-npm run build
-npm start
+# Production build
+npm run build && npm start
 ```
 
-## Making It Yours
+<br/>
 
-All personal information lives in `data/profile.json`. Open that file and update the following:
+---
 
-| Field            | What it controls                                    |
-| ---------------- | --------------------------------------------------- |
-| `name`           | Your full name, shown across all sections           |
-| `email`          | Contact email used in footer and CTA buttons        |
-| `tagline`        | One-line professional tagline shown in the hero     |
-| `description`    | Short description shown in footer and meta tags     |
-| `roles`          | Your role title and detailed specializations        |
-| `location`       | Country and availability (e.g. India, Worldwide)    |
-| `bio`            | Long-form bio shown in the About section            |
-| `stats`          | Key numbers: years of experience, projects, etc.    |
-| `skills`         | Skills shown in the scrolling marquee               |
-| `experience`     | Work history with company, role, bullets, and stack |
-| `projects`       | Project cards with title, description, and links    |
-| `publications`   | Blog posts or articles you have written             |
-| `socials`        | Social profile links (GitHub, LinkedIn, etc.)       |
+## 📁 &nbsp;Project Structure
 
-Website copy that is not personal data (section taglines, CTA text, footer phrases) lives in `data/content.json`. You can leave these as-is or update them to match your tone.
+```
+cinematic-portfolio/
+│
+├── 📂 app/
+│   ├── layout.js            ← Root layout, fonts & metadata
+│   ├── page.js              ← Assembles all sections
+│   └── globals.css          ← 🎨 Design tokens & base styles
+│
+├── 📂 components/
+│   ├── sections/            ← Hero · About · Projects · Experience · Footer
+│   └── ui/                  ← Navbar · VideoIntro · ScreenLoader
+│
+├── 📂 data/
+│   ├── profile.json         ← 🔑 All personal info lives here
+│   └── content.json         ← Site copy — section labels, CTAs
+│
+├── 📂 styles/
+│   └── sections/            ← Per-section CSS Modules
+│
+├── 📂 lib/
+│   └── siteConfig.js        ← Site URL (for SEO & OG tags)
+│
+└── 📂 public/
+    └── assets/              ← 🖼️ Images & videos
+```
 
-To update colors, open `app/globals.css` and edit the tokens under `:root`. The main ones are `--accent`, `--hero-start`, `--hero-mid`, `--hero-end`, and `--text-primary`.
+<br/>
 
-Update your site URL in `lib/siteConfig.js` before deploying.
+---
 
-## Assets
+## 🎨 &nbsp;Colour Theme — Navy Blue Dark
 
-Replace the files in `public/assets/` with your own:
+The entire palette is controlled by CSS variables in `app/globals.css`:
 
-| File                   | Used in                   | Description                            |
-| ---------------------- | ------------------------- | -------------------------------------- |
-| `about-me.mp4`         | Video Intro               | Full-screen intro video (ambient + main)|
-| `hero.png`             | Hero Section              | Your portrait photo                    |
-| `about.webp`           | About Section, OG Image   | Secondary photo used in about and SEO  |
-| `work-experience.webp` | Work Experience           | Background image for experience section|
-| `footer.png`           | Footer Section            | Image that transitions into the footer |
-| `footer-mobile.webp`   | Footer Section (mobile)   | Static background image for mobile     |
-| `footer-video.mp4`     | Footer Section (desktop)  | Looping background video for footer    |
-| `project-*.png`        | Projects Section          | One image per project in profile.json  |
+```css
+:root {
+  /* ── Background Gradient ────────────────────── */
+  --hero-start:   #0a0f1e;   /* ■ deep space navy  */
+  --hero-mid:     #0d1b3e;   /* ■ mid navy         */
+  --hero-end:     #1a2f6b;   /* ■ cobalt           */
 
-## Deployment
+  /* ── Accent (the blue glow) ─────────────────── */
+  --accent:       #4f8ef7;   /* ■ electric blue    */
+  --accent-hover: #3a7aee;   /* ■ deeper on hover  */
 
-Connect the repository to [Vercel](https://vercel.com) and it deploys automatically with zero configuration.
+  /* ── Text ───────────────────────────────────── */
+  --text-primary: #e8edf8;   /* bright white-blue  */
+  --text-muted:   #8a9cc2;   /* muted slate        */
+}
+```
 
-Alternatively:
+> 💡 Change `--accent` to any hex and the entire portfolio shifts colour instantly.
+
+<br/>
+
+---
+
+## 🖼️ &nbsp;Assets Guide
+
+Drop your files in `public/assets/` — keep the exact filenames:
+
+```
+public/assets/
+│
+├── hero.png               ← Your portrait photo (Hero section)
+├── about.webp             ← Secondary photo (About section)
+├── about-me.mp4           ← Full-screen intro video (opener)
+├── work-experience.webp   ← Experience section background
+├── footer.png             ← Footer image — desktop
+├── footer-mobile.webp     ← Footer image — mobile
+├── footer-video.mp4       ← Footer looping background video
+└── project-*.png          ← One screenshot per project
+```
+
+<br/>
+
+---
+
+## 🚀 &nbsp;Deploy
+
+**One-click via Vercel (recommended):**
+
+1. Push your fork to GitHub
+2. Import at [vercel.com/new](https://vercel.com/new)
+3. Done — auto-deploys on every commit ✅
+
+**Or via CLI:**
 
 ```bash
 npm i -g vercel
 vercel
 ```
 
-## License
+> Live at → **[cinematic-portfolio-mu.vercel.app](https://cinematic-portfolio-mu.vercel.app/)**
 
-MIT. Free to fork, adapt, and use as your own portfolio.
+<br/>
 
-## Author
+---
 
-**Vaibhav Khushalani** — Full Stack Engineer & AI Builder
+## 📜 &nbsp;License
 
-[GitHub](https://github.com/VaibhavKhushalani) &nbsp;|&nbsp; [LinkedIn](https://www.linkedin.com/in/vaibhav-khushalani-760217136) &nbsp;|&nbsp; [Medium](https://medium.com/@vaibhavkhushalani) &nbsp;|&nbsp; [Instagram](https://www.instagram.com/vaibhav.create) &nbsp;|&nbsp; [YouTube](https://www.youtube.com/@vaibhav.create)
+MIT — free to fork, adapt, and make your own.
+
+<br/>
+
+---
+
+<div align="center">
+
+
+**[🌐 Portfolio](https://cinematic-portfolio-mu.vercel.app/)** &nbsp;·&nbsp;
+**[💻 GitHub](https://github.com/de-coder-bit)** &nbsp;·&nbsp;
+**[🔗 LinkedIn](https://www.linkedin.com/in/deepak-verma-b552b5285/)**
+
+<br/>
+
+*If this helped you, drop a ⭐ — it means a lot!*
+
+<br/>
+
+`Built with Next.js` &nbsp;`·`&nbsp; `Animated with GSAP` &nbsp;`·`&nbsp; `3D with Three.js` &nbsp;`·`&nbsp; `Deployed on Vercel`
+
+</div>
