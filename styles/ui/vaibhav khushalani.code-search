@@ -1,0 +1,33 @@
+# Query: vaibhav khushalani
+# ContextLines: 1
+
+6 results - 5 files
+
+package.json:
+  5    "author": {
+  6:     "name": "Deepak Verma",
+  7      "email": "deepakverma4336@gmail.com",
+
+README.md:
+  94  
+  95: **Deepak Verma** — Full Stack Engineer & AI Builder
+  96  
+
+app\opengraph-image.jsx:
+    5  
+    6: export const alt = 'Deepak Verma| Full Stack Developer'
+    7  
+
+  224              height={630}
+  225:             alt="Deepak Verma"
+  226              style={{
+
+components\sections\AboutSection.jsx:
+  90                src="/assets/about.webp"
+  91:               alt="Deepak Verma"
+  92                fill
+
+components\sections\ScreenLoader.jsx:
+  96        <p className={styles.monogram}>
+  97:         Deepak Verma
+  98        </p>

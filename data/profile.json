@@ -1,0 +1,132 @@
+{
+  "name": {
+    "first": "Deepak",
+    "last": "Verma",
+    "full": "Deepak Verma"
+  },
+  "email": "deepakverma4336@gmail.com",
+  "tagline": "Crafting scalable full-stack experiences — from clean UIs to powerful backends & AI-driven products.",
+  "description": "Full Stack Developer building scalable web apps, cross-platform mobile solutions, and AI-powered products with modern technologies.",
+  "roles": {
+    "short": "Full Stack Developer",
+    "detailed": "Full-Stack Engineer · AI Engineer · Game Developer · Open Source Contributor"
+  },
+  "location": {
+    "based": "India",
+    "availability": "Worldwide"
+  },
+  "available": true,
+  "bio": "Full Stack Developer currently pursuing B.Tech in Computer Science at VIT Bhopal (2022–2027). Experienced in building responsive UIs, RESTful APIs, cross-platform mobile apps, and AI-powered platforms using React.js, Next.js, Node.js, and Supabase. Passionate about solving real-world problems through clean code, scalable architecture, and modern web technologies.",
+  "stats": [
+    { "value": "1+", "label": "Years Experience" },
+    { "value": "3+", "label": "Projects Completed" },
+    { "value": "2", "label": "Internships" }
+  ],
+  "skills": [
+    "Full Stack Developer",
+    "React.js",
+    "Next.js",
+    "React Native",
+    "Node.js",
+    "TypeScript",
+    "Python",
+    "PostgreSQL",
+    "MongoDB",
+    "AWS",
+    "Docker",
+    "AI Builder"
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "role": "Full Stack Developer Intern",
+      "company": "Apoliums Infotech India Pvt. Ltd.",
+      "companyShort": "APOLIUMS",
+      "type": "Internship",
+      "location": "India",
+      "period": "Oct 2025",
+      "periodEnd": "Mar 2026",
+      "bullets": [
+        "Built responsive UIs using React.js with component-based architecture and REST API integration.",
+        "Developed RESTful APIs and server-side logic using Node.js and Express.js.",
+        "Managed relational and non-relational databases integrated with Express.js backend.",
+        "Deployed full stack React + Node.js applications into production environments."
+      ],
+      "desc": "Worked as a Full Stack Developer Intern under Mr. Adarsh Kewat (Module Lead). Built responsive React UIs, developed REST APIs with Node.js and Express.js, managed databases, and deployed full-stack applications to production.",
+      "tech": [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "JavaScript",
+        "MongoDB",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "id": 2,
+      "role": "Core Member — Design & Technical Team",
+      "company": "Linpack Club, VIT Bhopal",
+      "companyShort": "LINPACK",
+      "type": "Internship",
+      "location": "Bhopal, India",
+      "period": "Oct 2024",
+      "periodEnd": "Jan 2025",
+      "bullets": [
+        "Architected an optimized UI using Next.js and Tailwind CSS, reducing development time by 40% and improving Lighthouse accessibility score by 25%.",
+        "Designed posters, social media graphics, and event banners with Adobe Illustrator and Canva, boosting event engagement by 60%."
+      ],
+      "desc": "Served as both Frontend Developer and Design Lead. Built optimized Next.js UI and led visual design for club events, significantly improving accessibility scores and event engagement.",
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Adobe Illustrator",
+        "Canva"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "ArtGenio",
+      "subtitle": "AI Prompt Marketplace & Creator Platform",
+      "type": "SaaS",
+      "link": "https://artgenio.com/",
+      "image": "/assets/project-artgenio.png",
+      "tech": [
+        "Next.js",
+        "MongoDB",
+        "NextAuth",
+        "Google Gemini API",
+        "Razorpay",
+        "PayPal"
+      ],
+      "desc": "Full-scale AI-powered marketplace for influencers and businesses. Features a subscription-based Creator Hub with 6 AI tools, Payment integration support for both international and domestic payments, scalable backend with MongoDB, and a complete admin dashboard for managing users, prompts, and analytics."
+    },
+    {
+      "id": 2,
+      "title": "EasyFolio",
+      "subtitle": "Multi-User Portfolio Platform",
+      "type": "Platform",
+      "link": "https://easyfolio.wuwb.in",
+      "image": "/assets/project-easyfolio.png",
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "Drizzle ORM",
+        "Turso (libSQL)",
+        "NextAuth",
+        "Cloudinary"
+      ],
+      "desc": "Full-stack multi-user portfolio platform enabling dynamic, database-driven portfolios with multiple themes. Role-based admin system, real-time content editing, PDF CV parsing, portfolio completion tracking."
+    }
+  ],
+  "publications": [],
+  "socials": [
+    { "label": "GitHub", "href": "https://github.com/de-coder-bit" },
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/deepak-verma-b552b5285/"
+    }
+  ]
+}
