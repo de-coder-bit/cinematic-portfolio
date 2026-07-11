@@ -4,22 +4,8 @@ import { useEffect, useRef, Fragment } from "react";
 import Image from "next/image";
 import * as THREE from "three";
 import { gsap } from "@/lib/gsap";
-import {
-  FaGithub,
-  FaLinkedinIn,
-  FaInstagram,
-  FaEnvelope,
-  FaWhatsapp,
-  FaTelegramPlane,
-  FaDiscord,
-} from "react-icons/fa";
-import { SiCodeforces, SiLeetcode, SiX } from "react-icons/si";
-import {
-  FiArrowUpRight,
-  FiChevronDown,
-  FiAward,
-  FiFileText,
-} from "react-icons/fi";
+import { FaGithub, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
+import { FiArrowUpRight, FiChevronDown, FiAward } from "react-icons/fi";
 import profile from "@/data/profile.json";
 import content from "@/data/content.json";
 import styles from "@/styles/sections/CertificatesFooterSection.module.css";
@@ -28,8 +14,8 @@ import ccStyles from "@/styles/sections/ContactChannels.module.css";
 const CERTS = profile.certificates;
 const GITHUB_CTA = profile.githubCta;
 
-// ── All contact channels for the premium footer grid ──
-// Update hrefs/handles here any time — this is the single source of truth
+// ── Contact channels for the footer grid ──
+// Update hrefs here any time — this is the single source of truth
 // for the footer contact links (independent of profile.json's `socials`).
 const CHANNELS = [
   {
@@ -39,99 +25,36 @@ const CHANNELS = [
     preferred: true,
   },
   {
-    label: "Gmail",
-    href: "mailto:deepakverma4336@gmail.com",
-    icon: <FaEnvelope size={14} />,
-    preferred: true,
-  },
-  {
     label: "GitHub",
     href: "https://github.com/de-coder-bit",
     icon: <FaGithub size={15} />,
   },
   {
-    label: "WhatsApp",
-    href: "https://wa.me/917999983308",
-    icon: <FaWhatsapp size={15} />,
+    label: "Gmail",
+    href: "mailto:deepakverma4336@gmail.com",
+    icon: <FaEnvelope size={14} />,
     preferred: true,
   },
-  {
-    label: "Telegram",
-    href: "https://t.me/debitcoder",
-    icon: <FaTelegramPlane size={14} />,
-  },
-  {
-    label: "Discord",
-    copy: "deepak_dev7_99581",
-    icon: <FaDiscord size={15} />,
-  },
-  {
-    label: "Codeforces",
-    href: "https://codeforces.com/profile/deepakverma4336",
-    icon: <SiCodeforces size={14} />,
-  },
-  {
-    label: "LeetCode",
-    href: "https://leetcode.com/u/gamer_greg/",
-    icon: <SiLeetcode size={14} />,
-  },
-  {
-    label: "Instagram",
-    href: "https://www.instagram.com/p.a.t.ell/",
-    icon: <FaInstagram size={15} />,
-  },
-  {
-    label: "X",
-    href: "https://x.com/deepak_ver47502",
-    icon: <SiX size={13} />,
-  },
-  {
-    label: "Arcade",
-    href: "https://www.skills.google/",
-    icon: <FiAward size={15} />,
-  },
 ];
-const RESUME_URL =
-  "https://drive.google.com/file/d/1hGvhbWi8itIggYDHCZ-ZX4IvENqQTal9/view?usp=drive_link";
 
 function ContactChannels({ variant = "desktop" }) {
-  function handleCopy(e, value) {
-    e.preventDefault();
-    if (navigator.clipboard?.writeText) navigator.clipboard.writeText(value);
-  }
-
   return (
     <div
       className={`${ccStyles.grid} ${variant === "mobile" ? ccStyles.mobile : ""}`}
     >
-      {CHANNELS.map((c) => {
-        const isCopy = !c.href;
-        const Tag = isCopy ? "button" : "a";
-        return (
-          <Tag
-            key={c.label}
-            className={`${ccStyles.item} ${c.preferred ? ccStyles.pref : ""}`}
-            href={c.href}
-            target={c.href ? "_blank" : undefined}
-            rel={c.href ? "noopener noreferrer" : undefined}
-            type={isCopy ? "button" : undefined}
-            onClick={isCopy ? (e) => handleCopy(e, c.copy) : undefined}
-            title={isCopy ? `Copy: ${c.copy}` : c.label}
-          >
-            <span className={ccStyles.icon}>{c.icon}</span>
-            <span className={ccStyles.label}>{c.label}</span>
-          </Tag>
-        );
-      })}
-      <a
-        className={ccStyles.resume}
-        href={RESUME_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FiFileText size={12} />
-        Resume
-      </a>
+      {CHANNELS.map((c) => (
+        <a
+          key={c.label}
+          className={`${ccStyles.item} ${c.preferred ? ccStyles.pref : ""}`}
+          href={c.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          title={c.label}
+        >
+          <span className={ccStyles.icon}>{c.icon}</span>
+          <span className={ccStyles.label}>{c.label}</span>
+        </a>
+      ))}
     </div>
   );
 }
