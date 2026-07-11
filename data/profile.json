@@ -121,7 +121,61 @@
       "desc": "Full-stack multi-user portfolio platform enabling dynamic, database-driven portfolios with multiple themes. Role-based admin system, real-time content editing, PDF CV parsing, portfolio completion tracking."
     }
   ],
-  "publications": [],
+  "certificates": [
+    {
+      "id": "cert-qualcomm-ai-upskilling",
+      "title": "AI Upskilling Certificate: Technical Foundation",
+      "issuer": "Qualcomm Academy",
+      "year": "Jul 2026",
+      "link": "/assets/certificates/qualcomm-ai-upskilling.png",
+      "image": "/assets/certificates/qualcomm-ai-upskilling.png"
+    },
+    {
+      "id": "cert-linkedin-ai-pair-programming",
+      "title": "AI Pair Programming with GitHub Copilot",
+      "issuer": "LinkedIn Learning",
+      "year": "Jul 2026",
+      "link": "/assets/certificates/linkedin-ai-pair-programming.png",
+      "image": "/assets/certificates/linkedin-ai-pair-programming.png"
+    },
+    {
+      "id": "cert-linkedin-first-time-tech-manager",
+      "title": "Succeeding as a First-Time Tech Manager",
+      "issuer": "LinkedIn Learning",
+      "year": "Jul 2026",
+      "link": "/assets/certificates/linkedin-first-time-tech-manager.png",
+      "image": "/assets/certificates/linkedin-first-time-tech-manager.png"
+    },
+    {
+      "id": "cert-kaggle-community-member",
+      "title": "Kaggle Community Member",
+      "issuer": "Kaggle",
+      "year": "Jun 2026",
+      "link": "/assets/certificates/kaggle-community-member.png",
+      "image": "/assets/certificates/kaggle-community-member.png"
+    },
+    {
+      "id": "cert-apoliums-internship",
+      "title": "Full Stack Development Internship",
+      "issuer": "Apoliums Infotech",
+      "year": "Mar 2026",
+      "link": "/assets/certificates/apoliums-internship-letter.png",
+      "image": "/assets/certificates/apoliums-internship-letter.png"
+    },
+    {
+      "id": "cert-google-it-support",
+      "title": "Google IT Support Certificate",
+      "issuer": "Google Career Certificates",
+      "year": "Feb 2026",
+      "link": "https://www.credly.com/go/bUWD1G99",
+      "image": "/assets/certificates/google-it-support.png"
+    }
+  ],
+  "githubCta": {
+    "label": "Explore my code",
+    "text": "Dive into my repositories, side projects and open-source contributions.",
+    "link": "https://github.com/de-coder-bit"
+  },
   "socials": [
     { "label": "GitHub", "href": "https://github.com/de-coder-bit" },
     {

@@ -8,12 +8,13 @@ import { gsap } from '@/lib/gsap'
 import {
   FaGithub, FaLinkedinIn, FaMedium, FaInstagram, FaYoutube, FaEnvelope,
 } from 'react-icons/fa'
-import { FiArrowUpRight, FiChevronDown } from 'react-icons/fi'
+import { FiArrowUpRight, FiChevronDown, FiAward } from 'react-icons/fi'
 import profile from '@/data/profile.json'
 import content from '@/data/content.json'
-import styles from '@/styles/sections/PublicationsFooterSection.module.css'
+import styles from '@/styles/sections/CertificatesFooterSection.module.css'
 
-const PUBS = profile.publications
+const CERTS = profile.certificates
+const GITHUB_CTA = profile.githubCta
 
 const SOCIAL_ICONS = {
   GitHub:    <FaGithub    size={13} />,
@@ -84,7 +85,7 @@ function handleViewProjects() {
   if (scroller) gsap.to(scroller, { scrollTop: 3 * window.innerHeight, duration: 1.0, ease: 'power3.inOut' })
 }
 
-export default function PublicationsFooterSection() {
+export default function CertificatesFooterSection() {
   const wrapperRef = useRef(null)
   const stickyRef  = useRef(null)
 
@@ -92,7 +93,7 @@ export default function PublicationsFooterSection() {
   const imageWrapRef    = useRef(null)
   const imageOverlayRef = useRef(null)
 
-  // publication content
+  // certificate content
   const pubContentRef = useRef(null)
   const labelRef      = useRef(null)
   const headingRef    = useRef(null)
@@ -199,7 +200,7 @@ export default function PublicationsFooterSection() {
       tick()
     }
 
-    // ── Publication entry animation ───────────────────────────
+    // ── Certificate entry animation ───────────────────────────
     let pubAnimDone = false
 
     function resetPubAnim() {
@@ -361,43 +362,68 @@ export default function PublicationsFooterSection() {
           <div ref={imageOverlayRef} className={styles.imageOverlay} />
         </div>
 
-        {/* ── Publication content (right of image) ── */}
+        {/* ── Certificate content (right of image) ── */}
         <div ref={pubContentRef} className={styles.pubContent}>
-          <span className={styles.watermark} aria-hidden>WRITING</span>
+          <span className={styles.watermark} aria-hidden>CERTIFIED</span>
 
           <div className={styles.pubHero}>
-            <p  ref={labelRef}   className={styles.label}>Research &amp; Writing</p>
-            <h2 ref={headingRef} className={styles.heading}>Publications</h2>
+            <p  ref={labelRef}   className={styles.label}>Certifications &amp; Code</p>
+            <h2 ref={headingRef} className={styles.heading}>Certificates</h2>
           </div>
 
           <div ref={dividerRef} className={styles.divider} />
 
           <div className={styles.list}>
-            {PUBS.map((pub, i) => (
+            {CERTS.map((cert, i) => (
               <a
-                key={pub.id}
-                href={pub.link}
+                key={cert.id}
+                href={cert.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 ref={el => { itemRefs.current[i] = el }}
                 className={styles.item}
               >
                 <div className={styles.num}>0{i + 1}.</div>
+                <div className={styles.certThumb}>
+                  {cert.image ? (
+                    <Image src={cert.image} alt={cert.title} fill sizes="56px" className={styles.certThumbImg} />
+                  ) : (
+                    <FiAward size={18} className={styles.certThumbIcon} />
+                  )}
+                </div>
                 <div className={styles.itemBody}>
                   <div className={styles.itemTop}>
-                    <h3 className={styles.title}>{pub.title}</h3>
-                    <span className={styles.platform}>{pub.platform}</span>
+                    <h3 className={styles.title}>{cert.title}</h3>
+                    <span className={styles.platform}>{cert.issuer}</span>
                   </div>
-                  <p className={styles.desc}>{pub.desc}</p>
                 </div>
                 <div className={styles.itemRight}>
-                  <span className={styles.year}>{pub.year}</span>
+                  <span className={styles.year}>{cert.year}</span>
                   <span className={styles.readBtn}>
-                    Read <FiArrowUpRight size={11} />
+                    View <FiArrowUpRight size={11} />
                   </span>
                 </div>
               </a>
             ))}
+
+            {GITHUB_CTA && (
+              <a
+                href={GITHUB_CTA.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                ref={el => { itemRefs.current[CERTS.length] = el }}
+                className={styles.githubCta}
+              >
+                <span className={styles.githubCtaIcon}><FaGithub size={20} /></span>
+                <div className={styles.githubCtaBody}>
+                  <h3 className={styles.githubCtaLabel}>{GITHUB_CTA.label}</h3>
+                  <p className={styles.githubCtaText}>{GITHUB_CTA.text}</p>
+                </div>
+                <span className={styles.readBtn}>
+                  Visit <FiArrowUpRight size={11} />
+                </span>
+              </a>
+            )}
           </div>
         </div>
 

@@ -126,7 +126,7 @@
   pointer-events: none;
 }
 
-/* ── Publication content (full width, over image) ─────── */
+/* ── Certificate content (full width, over image) ─────── */
 .pubContent {
   position: absolute;
   inset: 0;
@@ -183,14 +183,36 @@
 
 .item {
   display: grid;
-  grid-template-columns: 4rem minmax(0, 1fr) auto;
+  grid-template-columns: 4rem 3rem minmax(0, 1fr) auto;
   gap: clamp(0.8rem, 2vw, 2rem);
-  align-items: start;
+  align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.07);
   padding-top: clamp(0.7rem, 1.5vh, 1.1rem);
   text-decoration: none;
   will-change: transform, opacity;
   backface-visibility: hidden;
+}
+
+.certThumb {
+  position: relative;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.certThumbImg {
+  object-fit: cover;
+}
+
+.certThumbIcon {
+  color: rgba(255, 255, 255, 0.28);
 }
 
 .item:hover .title   { color: var(--accent); }
@@ -292,6 +314,59 @@
   transform: translateY(8px);
   transition: opacity 0.3s ease 0.06s, transform 0.3s ease 0.06s;
   pointer-events: none;
+}
+
+/* ── GitHub CTA card ──────────────────────────────────── */
+.githubCta {
+  display: grid;
+  grid-template-columns: 4rem 3rem minmax(0, 1fr) auto;
+  gap: clamp(0.8rem, 2vw, 2rem);
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  padding-top: clamp(0.7rem, 1.5vh, 1.1rem);
+  text-decoration: none;
+  grid-column: 1 / -1;
+}
+
+.githubCta:hover .githubCtaLabel { color: var(--accent); }
+.githubCta:hover .readBtn { opacity: 1; transform: translateY(0); }
+
+.githubCtaIcon {
+  grid-column: 2;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+  flex-shrink: 0;
+}
+
+.githubCtaBody {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.githubCtaLabel {
+  font-size: clamp(0.82rem, 1.5vw, 1.15rem);
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  transition: color 0.2s;
+}
+
+.githubCtaText {
+  font-size: var(--text-body);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.32);
+  margin: 0;
 }
 
 /* ── Footer content ───────────────────────────────────── */
@@ -765,7 +840,7 @@
 
   /* pubContent has no background - mobileDarkOverlay provides uniform darkness beneath all sections */
 
-  /* Publications */
+  /* Certificates */
   .pubHero { padding: 3.2rem 1.25rem 0; }
   .label   { font-size: 0.58rem; }
   .heading { font-size: clamp(1.6rem, 8vw, 2.2rem); }
