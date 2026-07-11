@@ -7,9 +7,7 @@ import { gsap } from "@/lib/gsap";
 import {
   FaGithub,
   FaLinkedinIn,
-  FaMedium,
   FaInstagram,
-  FaYoutube,
   FaEnvelope,
   FaWhatsapp,
   FaTelegramPlane,
@@ -28,21 +26,6 @@ import styles from "@/styles/sections/CertificatesFooterSection.module.css";
 
 const CERTS = profile.certificates;
 const GITHUB_CTA = profile.githubCta;
-
-const SOCIAL_ICONS = {
-  GitHub: <FaGithub size={13} />,
-  LinkedIn: <FaLinkedinIn size={13} />,
-  Medium: <FaMedium size={13} />,
-  Instagram: <FaInstagram size={13} />,
-  YouTube: <FaYoutube size={13} />,
-};
-
-const MOBILE_SOCIAL_ICONS = {
-  GitHub: <FaGithub size={20} />,
-  LinkedIn: <FaLinkedinIn size={20} />,
-  Instagram: <FaInstagram size={20} />,
-};
-const HERO_SOCIAL_LABELS = ["GitHub", "LinkedIn", "Instagram"];
 
 // ── All contact channels for the premium footer grid ──
 // Update hrefs/handles here any time — this is the single source of truth

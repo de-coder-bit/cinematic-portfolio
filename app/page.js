@@ -11,7 +11,6 @@ import WorkExperienceSection from "@/components/sections/WorkExperienceSection";
 import CertificatesFooterSection from "@/components/sections/CertificatesFooterSection";
 import ScreenLoader from "@/components/sections/ScreenLoader";
 import profile from "@/data/profile.json";
-import ContactSection from "@/components/sections/ContactSection";
 
 // Snap: 0=video 1=hero 2=about 3..4=projects 5=work-exp 6=certificates 7=footer (mobile: 6=certificates 7=footer)
 const PROJECT_SLIDES = profile.projects.length;
