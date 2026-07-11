@@ -1,94 +1,341 @@
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 6px 8px;
-  margin-top: 14px;
-  max-width: 320px;
-}
-
-.item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 7px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.03);
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 10.5px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  text-decoration: none;
-  cursor: pointer;
-  white-space: nowrap;
+.stage {
+  position: relative;
+  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
-  text-overflow: ellipsis;
-  transition: all 0.2s ease;
-}
-
-.item:hover {
-  border-color: rgba(120, 150, 255, 0.55);
-  color: #fff;
-  background: rgba(120, 150, 255, 0.12);
-}
-
-.pref {
-  border-color: rgba(120, 150, 255, 0.35);
-  color: rgba(255, 255, 255, 0.92);
-}
-
-.icon {
+  background:
+    radial-gradient(
+      ellipse 900px 500px at 15% 0%,
+      rgba(77, 141, 255, 0.08),
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 700px 500px at 100% 30%,
+      rgba(77, 141, 255, 0.05),
+      transparent 60%
+    ),
+    #080b13;
   display: flex;
   align-items: center;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: clamp(70px, 9vh, 96px) clamp(20px, 3vw, 40px) clamp(16px, 3vh, 32px);
+}
+
+.head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: clamp(14px, 2.4vh, 24px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  flex-wrap: wrap;
+}
+
+.eyebrow {
+  font-family: "Archivo", system-ui, sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #4d8dff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.pulseDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4d8dff;
+  box-shadow: 0 0 0 0 rgba(77, 141, 255, 0.35);
+  animation: pulse 2.2s infinite;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(77, 141, 255, 0.35);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(77, 141, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(77, 141, 255, 0);
+  }
+}
+
+.title {
+  font-family: "Archivo", system-ui, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  font-size: clamp(28px, 4.2vw, 46px);
+  line-height: 0.95;
+  color: #eef0f5;
+}
+.title span {
+  color: #4d5566;
+}
+
+.sub {
+  max-width: 320px;
+  color: #7c8496;
+  font-size: 12.5px;
+  line-height: 1.55;
+  padding-bottom: 4px;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: clamp(16px, 3vw, 32px);
+  padding-top: clamp(14px, 2.4vh, 22px);
+}
+
+.rail {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 1.6vh, 16px);
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+  padding-right: 16px;
+}
+
+.railLabel {
+  font-family: "Archivo", sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #4d8dff;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+.railValue {
+  font-family: "Archivo", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #eef0f5;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.railValue.status {
+  color: #4dff9e;
+}
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4dff9e;
+  box-shadow: 0 0 8px #4dff9e;
   flex: none;
 }
 
-.label {
+.railHint {
+  font-size: 10.5px;
+  color: #4d5566;
+  margin-top: 2px;
+}
+
+.main {
+  min-width: 0;
+}
+
+.channelsHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: clamp(8px, 1.4vh, 14px);
+}
+.channelsHead h3 {
+  font-size: 11px;
+  color: #7c8496;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  font-family: "Archivo", sans-serif;
+}
+.channelsCount {
+  font-size: 11px;
+  color: #4d5566;
+  font-family: "Archivo", sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.item {
+  position: relative;
+  background: #0d1220;
+  padding: clamp(10px, 1.6vh, 16px) 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #eef0f5;
+  transition: background 0.2s ease;
+}
+.item:hover {
+  background: #111828;
+}
+.item:hover .icon {
+  border-color: #4d8dff;
+  color: #4d8dff;
+  box-shadow: 0 0 0 3px rgba(77, 141, 255, 0.12);
+}
+
+.icon {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7c8496;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.meta {
+  flex: 1;
+  min-width: 0;
+}
+.name {
+  font-family: "Archivo", sans-serif;
+  font-weight: 800;
+  font-size: 11.5px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+.handle {
+  font-size: 10px;
+  color: #7c8496;
+  margin-top: 1px;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.resume {
-  grid-column: span 2;
+.badge {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-family: "Archivo", sans-serif;
+  font-size: 7.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #4d8dff;
+  background: rgba(77, 141, 255, 0.12);
+  border: 1px solid rgba(77, 141, 255, 0.3);
+  padding: 2px 5px;
+  border-radius: 999px;
+}
+
+.resumeBand {
+  margin-top: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  background:
+    linear-gradient(120deg, rgba(77, 141, 255, 0.06), transparent 60%), #0d1220;
+  padding: clamp(10px, 1.8vh, 16px) 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.resumeLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.resumeIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
-  padding: 8px 14px;
-  margin-top: 2px;
-  border-radius: 999px;
-  background: #fff;
-  color: #0a0a0a;
-  font-size: 11px;
+  color: #4d8dff;
+  flex: none;
+  font-size: 16px;
+}
+.resumeTitle {
+  font-family: "Archivo", sans-serif;
+  font-weight: 800;
+  font-size: 12.5px;
+  text-transform: uppercase;
+}
+.resumeSub {
+  font-size: 10.5px;
+  color: #7c8496;
+  margin-top: 1px;
+}
+
+.btn {
+  font-family: "Archivo", sans-serif;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: #eef0f5;
+  color: #080b13;
   transition: all 0.2s ease;
 }
-
-.resume:hover {
-  background: rgba(120, 150, 255, 0.9);
+.btn:hover {
+  background: #4d8dff;
   color: #fff;
+  box-shadow: 0 0 0 5px rgba(77, 141, 255, 0.12);
+}
+.btn svg {
+  width: 12px;
+  height: 12px;
+}
+@media (max-height: 760px) {
+  .body {
+    grid-template-columns: 160px 1fr;
+  }
+  .item {
+    padding: 8px 12px;
+  }
 }
 
-/* Mobile: single row, horizontal scroll if it overflows, larger touch targets */
-.mobile {
-  max-width: 100%;
-  grid-template-columns: none;
-  grid-auto-flow: column;
-  grid-auto-columns: max-content;
-  overflow-x: auto;
-  padding-bottom: 4px;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.mobile::-webkit-scrollbar {
-  display: none;
-}
-.mobile .item {
-  font-size: 12px;
-  padding: 8px 12px;
-}
-.mobile .resume {
-  grid-column: auto;
+@media (max-width: 860px) {
+  .stage {
+    height: auto;
+    min-height: 100vh;
+    padding: 20px 0;
+  }
+  .body {
+    grid-template-columns: 1fr;
+  }
+  .rail {
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    padding: 0 0 16px 0;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
