@@ -23,6 +23,7 @@ import {
 import profile from "@/data/profile.json";
 import content from "@/data/content.json";
 import styles from "@/styles/sections/CertificatesFooterSection.module.css";
+import ccStyles from "@/styles/sections/ContactChannels.module.css";
 
 const CERTS = profile.certificates;
 const GITHUB_CTA = profile.githubCta;
@@ -100,14 +101,16 @@ function ContactChannels({ variant = "desktop" }) {
   }
 
   return (
-    <div className={`cc-grid cc-${variant}`}>
+    <div
+      className={`${ccStyles.grid} ${variant === "mobile" ? ccStyles.mobile : ""}`}
+    >
       {CHANNELS.map((c) => {
         const isCopy = !c.href;
         const Tag = isCopy ? "button" : "a";
         return (
           <Tag
             key={c.label}
-            className={`cc-item ${c.preferred ? "cc-pref" : ""}`}
+            className={`${ccStyles.item} ${c.preferred ? ccStyles.pref : ""}`}
             href={c.href}
             target={c.href ? "_blank" : undefined}
             rel={c.href ? "noopener noreferrer" : undefined}
@@ -115,82 +118,20 @@ function ContactChannels({ variant = "desktop" }) {
             onClick={isCopy ? (e) => handleCopy(e, c.copy) : undefined}
             title={isCopy ? `Copy: ${c.copy}` : c.label}
           >
-            <span className="cc-icon">{c.icon}</span>
-            <span className="cc-label">{c.label}</span>
+            <span className={ccStyles.icon}>{c.icon}</span>
+            <span className={ccStyles.label}>{c.label}</span>
           </Tag>
         );
       })}
       <a
-        className="cc-resume"
+        className={ccStyles.resume}
         href={RESUME_URL}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FiFileText size={13} />
+        <FiFileText size={12} />
         Resume
       </a>
-
-      <style jsx>{`
-        .cc-grid {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 8px;
-          margin-top: 14px;
-        }
-        .cc-item {
-          display: inline-flex;
-          align-items: center;
-          gap: 7px;
-          padding: 8px 12px;
-          border-radius: 999px;
-          border: 1px solid rgba(255, 255, 255, 0.12);
-          background: rgba(255, 255, 255, 0.03);
-          color: rgba(255, 255, 255, 0.75);
-          font-size: 11.5px;
-          font-weight: 600;
-          letter-spacing: 0.02em;
-          text-decoration: none;
-          cursor: pointer;
-          transition: all 0.2s ease;
-        }
-        .cc-item:hover {
-          border-color: rgba(120, 150, 255, 0.55);
-          color: #fff;
-          background: rgba(120, 150, 255, 0.12);
-          transform: translateY(-1px);
-        }
-        .cc-pref {
-          border-color: rgba(120, 150, 255, 0.35);
-          color: rgba(255, 255, 255, 0.92);
-        }
-        .cc-icon {
-          display: flex;
-          align-items: center;
-        }
-        .cc-resume {
-          display: inline-flex;
-          align-items: center;
-          gap: 7px;
-          padding: 8px 14px;
-          border-radius: 999px;
-          background: #fff;
-          color: #0a0a0a;
-          font-size: 11.5px;
-          font-weight: 700;
-          letter-spacing: 0.02em;
-          text-decoration: none;
-          transition: all 0.2s ease;
-        }
-        .cc-resume:hover {
-          background: rgba(120, 150, 255, 0.9);
-          color: #fff;
-        }
-        .cc-mobile .cc-item,
-        .cc-mobile .cc-resume {
-          padding: 9px 13px;
-          font-size: 12.5px;
-        }
-      `}</style>
     </div>
   );
 }
